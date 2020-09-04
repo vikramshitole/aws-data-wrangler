@@ -192,14 +192,14 @@ def list_directories(path: str, boto3_session: Optional[boto3.Session] = None) -
     Using the default boto3 session
 
     >>> import awswrangler as wr
-    >>> wr.s3.list_objects('s3://bucket/prefix/')
+    >>> wr.s3.list_directories('s3://bucket/prefix/')
     ['s3://bucket/prefix/dir0', 's3://bucket/prefix/dir1', 's3://bucket/prefix/dir2']
 
     Using a custom boto3 session
 
     >>> import boto3
     >>> import awswrangler as wr
-    >>> wr.s3.list_objects('s3://bucket/prefix/', boto3_session=boto3.Session())
+    >>> wr.s3.list_directories('s3://bucket/prefix/', boto3_session=boto3.Session())
     ['s3://bucket/prefix/dir0', 's3://bucket/prefix/dir1', 's3://bucket/prefix/dir2']
 
     """
